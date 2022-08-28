@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
@@ -34,10 +36,11 @@ app.post("/", (req, res) => {
 
   const mcDataPost = JSON.stringify(mcData);
 
-  const listId = "8f02a6a340";
-  const apiKey = "a3ae273f0716250a3ad168ec8e20b288";
+  const listId = `${process.env.MC_LISTID}`;
+  const apiKey = `${process.env.MC_API}`;
+  const serverNo = `${process.env.MC_SERVER}`;
 
-  const mcURL = `https://us11.api.mailchimp.com/3.0/lists/${listId}`;
+  const mcURL = `https://${serverNo}.api.mailchimp.com/3.0/lists/${listId}`;
   const options = {
     url: mcURL,
     method: "POST",
