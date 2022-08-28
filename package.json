@@ -1,0 +1,13 @@
+{
+  "name": "newsletter-signup",
+  "version": "1.0.0",
+  "description": "This is newletter signup page. Where admin can send messages to all subscribers",
+  "main": "app.js",
+  "author": "Syed Rafsan Raiyan",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "request": "^2.88.2"
+  }
+}
